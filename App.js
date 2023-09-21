@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator()
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Home" screenOptions={{animation:"none"}}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Progate" component={Progate} />
         <Stack.Screen name="Contact" component={Contact} />

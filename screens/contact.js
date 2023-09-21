@@ -1,7 +1,13 @@
 import React from 'react'
 import { View, TextInput, Button, StyleSheet } from 'react-native'
 
-const Contact = () => {
+const Contact = ({ navigation }) => {
+  React.useEffect(() => {
+    navigation.addListener('beforeRemove', (event) => {
+      event.preventDefault()
+      // alert('Are you sure?')
+    })
+  },)
   return (
     <View style={styles.container}>
       <TextInput placeholder="Nama Anda" style={styles.textInput} />
